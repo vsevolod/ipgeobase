@@ -1,16 +1,22 @@
-== Ipgeobase
+= IPGeoBase
 
-Архив с сайта ipgeobase.ru, содержащий базу местонахождений российских (с точностью до города), украинских (с точностью до города) и европейских (с точностью до страны) ip-адресов.
+  Архив с сайта http://ipgeobase.ru, содержащий базу местонахождений российских (с точностью до города), украинских (с точностью до города) и европейских (с точностью до страны) ip-адресов.
 
-== Create models
+== Installation
+  
+(1) Add to Gemfile:
+    gem 'ipgeobase', :git => 'git@github.com:vsevolod/ipgeobase.git'
 
-  rails g ipgeobase:models
+(2) Install required gems:
+    bundle install
 
-#TODO
+(3) Create models
+    rails g ipgeobase:models
+
 == Upload new database
 
-  wget http://ipgeobase.ru/files/db/Main/geo_files.tar.gz
-  tar -xvzf geo_files.tar.gz
-
+* Update cities and regions from FILE or by URL(default)
   rails g ipgeobase:upload:cities
+
+* Update geo ips from FILE or by URL(default)
   rails g ipgeobase:upload:ips

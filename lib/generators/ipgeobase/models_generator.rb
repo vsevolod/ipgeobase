@@ -17,7 +17,7 @@ module Ipgeobase
       end
 
       def create_models
-        [:ipgeobase_ips, :ipgeobase_region].each do |filename|
+        [:ipgeobase_ip, :ipgeobase_region].each do |filename|
           template "#{generator_dir}/ipgeobase/#{filename}.rb",
           File.join("app/models/ipgeobase/#{filename}.rb")
         end
