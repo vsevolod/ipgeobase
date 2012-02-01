@@ -1,3 +1,16 @@
 == Ipgeobase
 
 Архив с сайта ipgeobase.ru, содержащий базу местонахождений российских (с точностью до города), украинских (с точностью до города) и европейских (с точностью до страны) ip-адресов.
+
+== Create models
+
+  rails g ipgeobase:models
+
+#TODO
+== Upload new database
+
+  wget http://ipgeobase.ru/files/db/Main/geo_files.tar.gz
+  tar -xvzf geo_files.tar.gz
+
+  rails g ipgeobase:upload:cities
+  rails g ipgeobase:upload:ips
