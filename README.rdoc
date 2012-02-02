@@ -13,6 +13,9 @@
 (3) Create models
     rails g ipgeobase:models
 
+(4) Run migration
+    rake db:migrate
+
 == Upload new database
 
 * Update cities and regions from FILE or by URL(default)
