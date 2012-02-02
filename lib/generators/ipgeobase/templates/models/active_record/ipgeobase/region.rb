@@ -1,11 +1,10 @@
 class Ipgeobase::Region < ActiveRecord::Base
+
+  set_table_name "ipgeobase_regions"
+
   has_ancestry
 
-  def self.table_name
-    "ipgeobase_regions"
-  end
-
-  has_many :ipgeobase_ipsm, :primary_key => :region_id
+  has_many :ips, :primary_key => :region_id
 
   before_save :cache_ancestry
   before_create :cache_ancestry

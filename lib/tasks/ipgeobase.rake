@@ -46,7 +46,7 @@ namespace :ipgeobase do
       content.each_line do |c|
         options = c.split("\t")
         next if options.last.to_i.zero?
-        Ipgeobase::Ip.create( :start_ip => options.first, :end_ip => options.second, :ipgeobase_region_id => options.last )
+        Ipgeobase::Ip.create( :start_ip => options.first, :end_ip => options.second, :region_id => options.last )
       end
 
     end
