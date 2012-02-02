@@ -1,4 +1,8 @@
-class Ipgeobase::IpgeobaseIp < ActiveRecord::Base
+class Ipgeobase::Ip < ActiveRecord::Base
+
+  def self.table_name
+    "ipgeobase_ips"
+  end
 
   belongs_to :ipgeobase_region, :primary_key => :region_id
 

@@ -3,11 +3,11 @@ class CreateTablesForIpgeobase < ActiveRecord::Migration
     create_table :ipgeobase_ips, :id => false do |t|
       t.integer :start_ip, :limit => 8
       t.integer :end_ip, :limit => 8
-      t.integer :ipgeobase_region_id
+      t.integer :region_id
     end
 
     add_index :ipgeobase_ips, [:start_ip]
-    add_index :ipgeobase_ips, [:ipgeobase_region_id], :name => "index_ipgeobase_ips_on_ipgeobase_region_id"
+    add_index :ipgeobase_ips, [:region_id], :name => "index_ipgeobase_ips_on_region_id"
 
     create_table :ipgeobase_regions do |t|
       t.string  :name

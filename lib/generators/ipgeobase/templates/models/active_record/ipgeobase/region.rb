@@ -1,5 +1,9 @@
-class Ipgeobase::IpgeobaseRegion < ActiveRecord::Base
+class Ipgeobase::Region < ActiveRecord::Base
   has_ancestry
+
+  def self.table_name
+    "ipgeobase_regions"
+  end
 
   has_many :ipgeobase_ipsm, :primary_key => :region_id
 
