@@ -1,5 +1,5 @@
 require "ipgeobase/version"
+require "ipgeobase/railtie"
 
 module Ipgeobase
-  require 'lib/ipgeobase/railtie' if defined?( Rails )
 end

@@ -10,9 +10,10 @@ class CreateTablesForIpgeobase < ActiveRecord::Migration
     add_index :ipgeobase_ips, [:ipgeobase_region_id], :name => "index_ipgeobase_ips_on_ipgeobase_region_id"
 
     create_table :ipgeobase_regions do |t|
-      t.string :name
-      t.string :ancestry
-      t.text   :names_depth_cache
+      t.string  :name
+      t.string  :ancestry
+      t.text    :names_depth_cache
+      t.integer :region_id
       t.timestamps
     end
 

@@ -1,9 +1,12 @@
 require 'ipgeobase'
-require 'rails'
+
 module Ipgeobase
-  class Railtie < Rails::Railtie
-    rake_tasks do
-      require 'tasks/ipgeobase.rake'
+  if defined? Rails
+    require 'rails'
+    class Railtie < Rails::Railtie
+      rake_tasks do
+        load "tasks/ipgeobase.rake"
+      end
     end
   end
 end
