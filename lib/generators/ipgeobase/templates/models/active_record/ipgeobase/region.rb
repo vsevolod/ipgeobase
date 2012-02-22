@@ -1,6 +1,6 @@
 class Ipgeobase::Region < ActiveRecord::Base
 
-  set_table_name "ipgeobase_regions"
+  self.table_name = "ipgeobase_regions"
 
   has_ancestry
 

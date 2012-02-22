@@ -1,6 +1,6 @@
 class Ipgeobase::Ip < ActiveRecord::Base
 
-  set_table_name "ipgeobase_ips"
+  self.table_name = "ipgeobase_ips"
 
   belongs_to :region, :primary_key => :region_id
 
