@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Avramov Vsevolod"]
   s.email       = ["gsevka@gmail.com"]
   s.homepage    = "http://github.com/vsevolod/ipgeobase"
-  s.description = "upload archive from IPGeoBase.ru to your project"
+  s.summary     = "upload archive from IPGeoBase.ru to your project"
 
   s.rubyforge_project = "ipgeobase"
 
